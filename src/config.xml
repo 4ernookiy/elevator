@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>
+ количество   этажей здания         (storeysNumber 1-1000)       
+ вместимость кабины лифта (человек) (elevatorCapacity 1-1000)
+ количество людей для перевозки     (passengersNumber 1-40000)  
+ ускорение анимации (коэффициент)   (animationBoost 0-30 (0-no animation))   
+</comment>
+<entry key="storeysNumber">9</entry>
+<entry key="elevatorCapacity">4</entry>
+<entry key="passengersNumber">18</entry>
+<entry key="animationBoost">0</entry>
+</properties>

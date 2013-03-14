@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="false"
+	xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="a_console" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%p: %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="a_events" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="events.log" />
+		<param name="MaxFileSize" value="10MB" />
+		<param name="MaxBackupIndex" value="5" />
+		<param name="Encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.EnhancedPatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-10.10t][%12c{-3}] - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="a_error" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="errors.log" />
+		<param name="MaxFileSize" value="10MB" />
+		<param name="MaxBackupIndex" value="5" />
+		<param name="Encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.EnhancedPatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-10.10t][%12c{-3}] - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="by.gsu.epamlab" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="a_error" />
+		<appender-ref ref="a_console" />
+	</logger>
+
+	<logger name="by.gsu.epamlab.events" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="a_events" />
+		<appender-ref ref="a_console" />
+	</logger>
+
+	<root>
+		<priority value="ERROR" />
+		<appender-ref ref="a_error" />
+		<appender-ref ref="a_console" />
+	</root>
+
+</log4j:configuration>

@@ -1,0 +1,11 @@
+package by.gsu.epamlab.events;
+
+public enum EventType {
+    STARTING_TRANSPORTATION,                      
+    COMPLETION_TRANSPORTATION,
+    ABORTING_TRANSPORTATION,
+    MOVING_ELEVATOR,  
+    BOADING_OF_PASSENGER,
+    DEBOADING_OF_PASSENGER,
+    VALIDATION;
+}

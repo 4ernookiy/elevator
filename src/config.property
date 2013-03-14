@@ -1,0 +1,10 @@
+; количество этажей здания 1-9
+storeysNumber = 9
+;вместимость кабины лифта (человек) 1-5
+elevatorCapacity  4
+;количество людей для перевозки 1-100
+passengersNumber = 45
+;ускорение анимации (0 - no animation) 0-30
+animationBoost = 13
+
+
